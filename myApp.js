@@ -8,25 +8,15 @@ app.get("/", function(req, res) {
   });
 
 
-let express = require('express');
-let app = express();
-require('dotenv').config()
+/*app.get("/json", (req, res) => {
+    res.json({message: "Hello json"});
+});*/
 
-// console.log(“Hello World”);
+app.get("/json", (req, res) => {
+    if (process.env.MESSAGE_STYLE == "uppercase") {
+        res.json({message: "HELLO JSON"})
+    } else {
+        res.json({message: "Hello json"})
+    }
 
-app.get("/", (req,res) => {
-res.sendFile(__dirname + "/views/index.html")
-})
-
-// Assets at the /public route
-app.use('/public', express.static(__dirname + '/public'));
-
-app.get('/json', (req, res) => {
-var response;
-if (process.env.MESSAGE_STYLE) {
-response = {"message": "HELLO JSON"}
-} else {
-response = {"message": "Hello json"}
-}
-res.json(response)
-});
+  });
