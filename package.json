@@ -2,10 +2,10 @@
   "name": "fcc-learn-node-with-express",
   "version": "0.1.0",
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.20.3",
     "cookie-parser": "^1.4.3",
     "dotenv": "^16.0.1",
-    "express": "^4.14.0",
+    "express": "^4.21.1",
     "fcc-express-bground": "git+https://github.com/vijayaratnakumari/freecodecamp.git",
     "nodemon": "^3.1.0"
   },
